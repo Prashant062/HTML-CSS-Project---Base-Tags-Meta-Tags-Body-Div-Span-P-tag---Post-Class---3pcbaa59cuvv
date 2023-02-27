@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Tab Navigation</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
 
+    body{
+    background-color: rgba(46, 14, 119, 0.781); 
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    margin: 0;
+}
+.phone{
+    background-image: url("images.jpeg");
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #eee;
+    border-radius: 15px;
+    height: 600px;
+    width: 340px;
+}
+nav{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top:-5px;
+    width: 100%;
+}
+nav ul{
+    background-color: whitesmoke;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
+nav li{
+    color: #777;
+    cursor: pointer;
+    flex : 1;
+    padding: 10px;
+    text-align: center;
+}
+nav ul li p{
+    font-size: 12px;
+    margin:2px 0;
+}
+nav ul li:hover{
+    color: chocolate;
+}
+img:hover{
+    color: chocolate;
+    width: 20px;
+}
+   </style>
+</head>
+<body>
+        <div class="phone">
+                <nav>
+                    <ul>
+                        <li class="home">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOFJREFUSEvtld0RQTEQhb/bgRZUgApQCSpBJXSCDqhACzpgjrm5E0nuzY/JE/uYbM63u3N20lA5msr65ABGwKktaAk8UopLBRjxaSt6BZIgqYAjsHIq1tkm1kUKICRudKOQGGAHbCNV7gHlBWMIsAYOsRG09xqVuvGiD5AjbkSDkBBATpEd5ZyckG3lLDmsCxdQKm4EPYgNUMX3gsrdLgUZm0W0AWptkjOTgVxpzXRfC3AD3lvf56JnYSee3m8B3G5DY/xqRH/AhzHPwNw6uQALx7opOVl/ctFqxD6cIlH70Qtl2ysZugObfgAAAABJRU5ErkJggg=="/>
+                                <p>Home</p>
+                            </li>
+                        <li class="user">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUBJREFUSEvVlG1RQzEQRU8VAA4qgSoAHBQFgIOiAFAADhgc1AFFAUioA1oF7Vxmlwl5SfZNIT/Ir3aSt+fu3Y8Jnc+kc3zGAs6BO+DUBH0AD8AqEjgGcG/BS7EE0X31RAApfwW2wAJYAhvgGngCjoCLViYRQBacAZcWPFUqyDPwBkhI8UQAqZXK0rtj4NMyOukJkH2CHZRBd4u8yF5Y+e2/H035r4qstLu2qfuqTARKB03//2TQomFt3rfaVJ1xBcxNed4pqoVWhobvxWozgNUAskRDNB0pfw3clCwrAbxzFFtdI6+lVIrTo4xUE91r2nUGHZUD9NG7KQ8XWULzTlMms1RMDtBCU38390vFNh/KW1uEX89ygD9qDk8F4Nb+EJcDfLlpeeWeR/UuLr8csLMo0ZatwQbfHxooyub7/v8D9gzNRRmX6M9FAAAAAElFTkSuQmCC"/>
+                         <p>User</p>
+                        </li>
+                        <li >
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAQJJREFUSEvFleERATEQhb+rABWgAkqgAkqgAlSADqgAJeiADnRAB6iAWZMzmUjOxuXG/k7et3nJy2ZUXFnF+vgAQ2AOdEvAD0Bf9vsAF6BZQjzf+tL2AR4JxN/asYAZsDUNTI2VoX6iTyDiK0dtUQD5AHyzpgHcHEALOAeOkARQB65aQL4udJIlIJbYNQI2qQCiI4CdsWpg7kRO4atoi2Jf70+AO3AyJEl6rYAa9Uz3xg75AuzqAZIHscstNWBshSvUsO+yVRatTYca/yWEE2uhCtAG5PPTlBs6lUWx88LOkAqg6Ty05n+AygeOjEz5Ejol/DkCkhHvRCuhG0hbUkVH7Akgri8ZHl1MZgAAAABJRU5ErkJggg=="/>
+                        <p>Contact</p>
+                            </li>
+                        <li >
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAP5JREFUSEvdlDEOAUEUhr/tJdwApc4ROIYKpYJE4hqi0Gm4gSNwBEfgBgo9+ZPZ5BkbO2ss4TW7mZn3fzP/vHkJJUdSsj7/BegAW6AWadsRGAJ76ViLzkA1UjxNF6TpA65uNvZe7nSs2EcBFWAF9IAlMClgXfAJ0oW+lXmsIEALGAFjYA7MjKqqbAFMARWGH0EAmyS7LmZgA/QBfVWO0YCBU5Cg/tdGUQCN2yh0gjawc9myRNbYhyiLusDBEIIBEpK4IM9C4oKk9xEMSL3OqxrN2/sIBoQIZ635HuCdze4ENPwXqnYtL+uveuPyJK5yfmjXkbrZ6bGtOXdTvw+4AdEsOBnAdmUcAAAAAElFTkSuQmCC"/>
+                            <p>Image</p>  
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+    </body>
+    </html>
